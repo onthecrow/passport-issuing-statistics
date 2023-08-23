@@ -37,7 +37,7 @@ fun App() {
     MaterialTheme {
         var greetingText by remember { mutableStateOf("Hello, World!") }
         var showImage by remember { mutableStateOf(false) }
-        var startPassportUid by remember { mutableStateOf("2000656012023051400003901") }
+        var startPassportUid by remember { mutableStateOf("2000656012023051400003901"/*"2000656012023081800004122"*/) }
         val localScope = rememberCoroutineScope()
         val passports = passportsInteractor.passports.consumeAsFlow().collectAsState(listOf(), localScope.coroutineContext)
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
